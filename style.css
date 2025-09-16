@@ -187,7 +187,7 @@ header {
     overflow-y: auto;        
     font-size: 16px;
     color: #000;
-    scrollbar-width:thin;
+    scrollbar-width: thin;
     scrollbar-color: #0080ff #e0e7ef;
     background: #fff;
 }
@@ -234,6 +234,7 @@ header {
     .messages {
         font-size: 15px;
         padding: 10px;
+        
     }
     #input_box {
         padding: 8px 10px;

@@ -13,37 +13,6 @@ body {
 }
 
 
-#patient {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px;
-  max-height: 490px;
-  overflow-y: auto;
-}
-
-.bubble {
-  padding: 10px 15px;
-  border-radius: 15px;
-  max-width: 70%;
-  font-size: 14px;
-  line-height: 1.4;
-  word-wrap: break-word;
-}
-
-.user {
-  align-self: flex-end;
-  background: #0084ff;
-  color: white;
-  border-bottom-right-radius: 0;
-}
-
-.ai {
-  align-self: flex-start;
-  background: #e5e5ea;
-  color: black;
-  border-bottom-left-radius: 0;
-}
 
 
 
