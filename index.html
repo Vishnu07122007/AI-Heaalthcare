@@ -9,13 +9,17 @@
 <body>
   <header>
     <div class="navbar">
-      <div class="logo">AI Healthcare</div>
+      <div class="logo">
+        <a href="index.html">AI Healthcare</a>
+      </div>
       <nav>
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#">Symptoms</a></li>
           <li><a href="#">Clinics</a></li>
           <li><a href="#">Appointment</a></li>
+          <li><a href="about_us.html">About us</a></li>
+
         </ul>
       </nav>
         <button class="theme-toggle">🌙</button>
@@ -27,29 +31,19 @@
     </div>
   </header>  
 <main>
-  <div id="msg_box">
+  <div id="msg_box" >
     <div id="chat_area">
-      <div class="messages">
-        <p>Hello! How can I help you?</p>
-        <p>Type your symptoms below 👇</p>
-        <p>More dummy messages...</p>
-        <p>Keep scrolling...</p>
-        <p>Even more text...</p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illo nobis tempore. Vel nisi dignissimos, sequi dolorem, exercitationem incidunt atque soluta unde aliquam quos suscipit eveniet accusamus delectus reprehenderit labore!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt explicabo deserunt dolorem ullam unde minima dignissimos. Voluptate quod minima sunt consequatur, quos repellat quaerat cupiditate rem cumque deleniti ratione incidunt ipsam est assumenda vel optio, suscipit dignissimos eaque corporis velit? Esse, vero distinctio hic sequi voluptatem blanditiis laudantium, obcaecati eligendi reiciendis earum expedita consequuntur, quidem minima maiores? Et perspiciatis nobis enim culpa porro nisi provident suscipit, facilis cum, obcaecati, cumque hic doloribus harum! Maiores, quaerat dignissimos eos fugiat esse, veniam numquam sunt quasi minima repellat tenetur, in quibusdam? Architecto corporis natus ad doloremque odio eligendi consequuntur voluptatum beatae dolorem, adipisci quis ut fuga rem tenetur perspiciatis, deleniti nemo debitis illum qui, odit mollitia magnam? Nesciunt soluta porro suscipit aliquam, distinctio voluptatibus quae unde quis architecto nemo accusamus, non commodi corrupti quidem perspiciatis? Sit, ratione. Sunt repellat alias ut delectus vitae a, cupiditate culpa maxime repellendus quas. Quos facilis, laudantium dolores repellat ea illo non! Aspernatur rerum voluptatem quisquam, quidem reiciendis tenetur earum nemo animi minima laborum aliquid maxime sunt omnis accusantium nobis modi, ex dolor quis fugiat facilis. Fugiat praesentium nemo explicabo quam unde, assumenda voluptates iste ipsum repudiandae molestias corrupti. Exercitationem sit deleniti iure quam temporibus fugiat harum eaque ex accusantium officiis aliquam laudantium, magnam impedit perferendis rerum, atque nostrum commodi. Placeat dolorum aliquam repellat nulla temporibus. Officiis iste quidem molestiae eveniet, soluta esse distinctio cupiditate minima odio eius numquam enim unde? Fugiat, aspernatur! Atque provident at fuga veniam quas molestias dolorem officia exercitationem ullam tempora dolor, itaque dicta sit iusto, fugiat est alias quos modi accusantium obcaecati culpa. Ipsa necessitatibus autem ipsam atque ducimus, soluta corrupti earum cum pariatur ratione consectetur perspiciatis ex deserunt voluptates alias aliquam incidunt minus fugit at corporis laboriosam. Impedit, sapiente! Pariatur sunt recusandae esse non rerum officiis nisi quasi soluta sed est, aut commodi itaque facilis! Cumque voluptatum suscipit inventore enim, voluptas nisi omnis corporis magnam illo est ad sapiente harum atque unde dolorum doloremque sed fuga! Doloribus porro illum tenetur in similique quam nesciunt totam beatae esse dolorem, ad eius perferendis dignissimos fugiat quasi! Culpa sapiente consequatur adipisci obcaecati unde quia, sint, reiciendis laboriosam deleniti dolorum nam sed vel voluptate soluta sit modi reprehenderit illo voluptates quisquam! Iste dolores odio aspernatur incidunt nam, sint ducimus dolor facilis fuga eaque quibusdam molestias? Nihil nulla tenetur, assumenda vel, voluptatum ut nesciunt tempora reiciendis laudantium facilis sapiente dolores magni et quos saepe? Officiis dolores minus distinctio provident laborum recusandae libero, vel ut accusantium fuga ducimus odit voluptatem maiores quas sequi quidem sit, molestias commodi modi minima totam debitis, voluptate nulla. Vero, voluptatum. Possimus asperiores ab unde aut veritatis illo quasi voluptatum ad doloribus cum? Similique minima sunt praesentium commodi doloremque velit animi iste placeat omnis necessitatibus? Totam quam eveniet mollitia voluptas officiis? Aperiam ipsam tempora ad sint aspernatur! Pariatur beatae unde asperiores quos tenetur mollitia adipisci hic, ipsa iste quae! Veniam porro fuga reprehenderit totam vitae distinctio alias ullam molestiae accusamus omnis, ab odit aliquid quam aliquam esse. Unde neque accusamus vel iure incidunt tempora.
+      <div class="messages"  >
+        <div id="patient" style="text-align: left;"></div>
+        <div id="AI"></div>
       </div>
-
       <div id="input_box">
-        <input type="text" placeholder="Enter your symptoms" autofocus>
-        <button>Send</button>
+        <input id="patient_input" type="text" placeholder="Enter your symptoms" autofocus>
+        <button id="send">Send</button>
       </div>
     </div>
   </div>
 </main>
-
-
-
-
 
   <script>
 const hamburger = document.querySelector(".hamburger");
@@ -60,5 +54,5 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("open"); 
 });
 </script>
-</body>
+<script src="script.js"></script></body>
 </html>

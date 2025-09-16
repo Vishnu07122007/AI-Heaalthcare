@@ -2,12 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overscroll-behavior: none;
+    scroll-behavior: smooth;
+    scrollbar-color: #0080ff #f1f1f1;
+    scrollbar-width: thin;
 }
 
 body { 
     font-family: Arial, sans-serif;
-    overflow: hidden;
+    overflow:auto;
 }
 
 
@@ -162,88 +164,148 @@ header {
   .hamburger { display: flex; }
 }
 
-#msg_box {
-    margin: 15px auto;
-    width: 90%;
-    max-width: 800px;
-    height: 87vh;             
-    background: #f3f3f3;
+footer{
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #0080ff;
+  color: white;
+  text-align: center;
+
+    
+}
+
+.about-main {
+    max-width: 900px;
+    margin: 10px auto 80px auto;
+    padding: 32px 24px;
+    background: #fff;
     border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,128,255,0.08);
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-hero h1 {
+    font-size: 2.7rem;
+    color: #0080ff;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
+.about-hero h2 {
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 18px;
+}
+
+.highlight {
+    color: #0080ff;
+    font-weight: bold;
+}
+
+.about-hero p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 0;
+}
+
+.about-features {
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin: 36px 0;
 }
 
-#chat_area {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    height: 100%;
+.feature {
+    background: #f3f8ff;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,128,255,0.07);
+    padding: 24px 18px;
+    flex: 1 1 200px;
+    min-width: 220px;
+    max-width: 320px;
+    text-align: center;
+    transition: transform 0.2s;
 }
 
-.messages {
-    flex: 1;                
-    padding: 15px 20px;
-    overflow-y: auto;        
-    font-size: 16px;
-    color: #000;
-    scrollbar-width:thin;
-    scrollbar-color: #0080ff #e0e7ef;
-    background: #fff;
+.feature:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,128,255,0.13);
 }
 
-#input_box {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 15px;
-    border-top: 1px solid #ccc;
-    background: #fff;
-   
+.feature h3 {
+    color: #0080ff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
-#input_box input[type="text"] {
-    flex: 1;
-    padding: 10px 14px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    outline: none;
-    font-size: 15px;
+.feature p {
+    color: #333;
+    font-size: 1rem;
 }
 
-#input_box button {
-    padding: 10px 18px;
+.about-mission, .about-future {
+    margin: 32px 0;
+    text-align: center;
+}
+
+.about-mission h2, .about-future h2 {
+    color: #0080ff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.about-mission p, .about-future p {
+    color: #444;
+    font-size: 1.05rem;
+    margin-bottom: 0;
+}
+
+hr {
     border: none;
-    border-radius: 20px;
-    background: #0080ff;
-    color: #fff;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#input_box button:hover {
-    background: #005bb5;
+    border-top: 2px solid #e0e7ef;
+    margin: 32px 0;
 }
 
 @media (max-width: 768px) {
-    #msg_box {
-        width: 98%;
-        height: 85vh;
+    .about-main {
+        max-width: 98%;
+        padding: 18px 6px;
     }
-    .messages {
-        font-size: 15px;
-        padding: 10px;
+    .about-features {
+        gap: 16px;
     }
-    #input_box {
-        padding: 8px 10px;
-    }
-    #input_box input[type="text"] {
-        font-size: 15px;
-    }
-    #input_box button {
-        font-size: 14px;
-        padding: 8px 12px;
+    .feature {
+        min-width: 160px;
+        padding: 16px 8px;
     }
 }
 
+@media (max-width: 600px) {
+    .about-main {
+        margin: 16px 0 80px 0;
+        padding: 8px 2vw;
+    }
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+    .about-hero h2 {
+        font-size: 1.1rem;
+    }
+    .about-features {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .feature {
+        max-width: 98%;
+        min-width: unset;
+    }
+}
